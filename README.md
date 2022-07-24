@@ -1,117 +1,198 @@
-# Berry Free React Material UI Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=reactjs,webdev,developers,javascript)
+# D-share 웹 어플리케이션
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-react-admin-template/blob/main/LICENSE)
-[![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/berry-free-react-admin-template)](https://github.com/codedthemes/berry-free-react-admin-template/)
+D-share : 사내 실시간 공유자원 웹 어플리케이션
+`사내 공유 자원들을 실시간으로 예약할 수 있습니다.`
 
-Berry is a free Material UI admin dashboard template built with React. It is meant to provide the best possible User Experience with highly customizable feature-rich pages. It is a complete Dashboard Template that has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
+---
 
-:star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme :star: :star: :star:
+## 구성
 
-![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-repo-1.jpg)
+#### 프로젝트 구성 : 요구사항 분석 -> 계획 -> 설계 -> 구현 -> 시험
 
-[Pro version](https://berrydashboard.io) of Berry react template contains features like TypeScript, Next.js Seed versions, Apps, Authentication Methods (i.e. JWT, Auth0, Firebase), Advance Components, Form Plugins, Layouts, Widgets, and many more.
+#### 발표 구성 : 요구사항 분석(문제인식, 문제분석, 해결전제) -> 전략 -> 전략에 대한 문제점-> 해결방안
 
-| [Berry Free](https://berrydashboard.io/free/) | [Berry](https://material-ui.com/store/items/berry-react-material-admin/) |
-| --------------------------------------------- | :----------------------------------------------------------------------- |
-| **9** Demo pages                              | **45+** demo pages                                                       |
-| -                                             | ✓ Multi-language                                                         |
-| -                                             | ✓ Dark/Light Mode 🌓                                                     |
-| -                                             | ✓ TypeScript version                                                     |
-| -                                             | ✓ Design files (Figma)                                                   |
-| -                                             | ✓ 6+ color Options                                                       |
-| -                                             | ✓ RTL                                                                    |
-| -                                             | ✓ JWT, Firebase, Auth0 authentications                                   |
-| -                                             | ✓ [More components](https://berrydashboard.io/dashboard/default)         |
+### [스토리보드]()
 
-## Why Berry?
+### [플로우차트]()
 
-Berry offers everything you need to create dashboards. We have included the following high-end features in our initial release:
+### [ERD - aquerytool]()
 
--   Modern aesthetics UI design
--   Material-UI components
--   Fully Responsive, all modern browser supported
--   Easy to use code structure
--   Flexible & High-Performance code
--   Easy Documentation Guide
+### [ERD]()
 
-## Free Berry React version
+### [회의록]()
 
--   [Preview](https://berrydashboard.io/free/)
--   [Download from Github](https://github.com/codedthemes/berry-free-react-admin-template)
+### [최종 PPT]()
 
-## Berry Pro version
+---
 
--   [Preview](https://berrydashboard.io)
--   [Purchase from MUI Store](https://material-ui.com/store/items/berry-react-material-admin/)
+## 전체 구성 단계 (SPA 형식)
 
-## Table of contents
-
--   [Getting Started](#getting-started)
--   [Documentation](#documentation)
--   [Technology Stack](#technology-stack)
--   [Author](#author)
--   [Issues?](#issues)
--   [License](#license)
--   [More Products](#more-free-react-material-admin-templates)
--   [Follow us](#follow-us)
-
-## Getting Started
-
-Clone from Github
+-   front-end
 
 ```
-git clone https://github.com/codedthemes/berry-free-react-admin-template.git
+
+
 ```
 
-## Documentation
+-   redux
 
-[Berry documentation](https://codedthemes.gitbook.io/berry/) helps you with installation, deployment, and troubleshooting.
+```
+ event(onclick) -> action                         -> store                      -> reducer                         ->useEffect
+                    ㄴaction type                     ㄴdispatch
+                    ㄴaction method                                                   ㄴ상태변경 전 initialState
+                      - createPrimiseThunk- > api                                     ㄴapi 호출 성공
+                                                                                      ㄴapi 호출 실패
+```
 
-## Technology Stack
+## 역할분담()
 
--   [Material UI V5](https://material-ui.com/)
--   Built with React Hooks API
--   Redux & React Context API for State Management
--   React Router for Navigation Routing
--   Support of react-script
--   Code Splitting
--   CSS-in-JS where CSS is composed using JavaScript instead of defined in external files
+### 프로젝트 설계 및 역할 분담
 
-## Author
+| 내용                       | 사람                   | 기간        |
+| -------------------------- | ---------------------- | ----------- |
+| 전체 프로젝트 기획 및 구상 | 정재빈, 오윤성, 윤우형 | 6/14 ~ 6/16 |
+| 프로젝트 총괄, setup       | 정재빈                 | 6/14 ~ 7/14 |
+| DB 설계                    | 정재빈                 | 6/16 ~ 6/20 |
+| AWS ec2, s3, Jenkins       | 정재빈                 | 6/20 ~ 6/25 |
+| AWS frontcloud             | 오윤성                 | 6/20 ~ 6/23 |
+| 스토리 보드 , 플로우 차트  | 윤성, 우형             | 6/14 ~ 6/18 |
 
-Berry is developed by Team [CodedThemes](https://codedthemes.com).
+<br>
 
-## Issues
+### 서버기능 구현 역할
 
-To report a bug, please submit an [issue](https://github.com/codedthemes/berry-free-react-admin-template/issues) on Github. We will respond as soon as possible to resolve the issue.
+| 내용                                                                                   | 사람                   | 기간        |
+| -------------------------------------------------------------------------------------- | ---------------------- | ----------- |
+| 차량, 회의실 예약 전체조회, 무한스크롤(커서 페이지 네이션), 레시피 최신순(날짜순) 조회 | 정재빈, 오윤성, 윤우형 | 6/20~28     |
+| 회의실 차량 저장, 즐겨찾기, 수정, 다중이미지 파일업로드                                | 정재빈, 오윤성, 윤우형 | 6/28 ~ 6/31 |
+| 사원등록, 이메일/닉네임 중복검사                                                       | 오윤성                 | 7/1 ~ 7/3   |
+| jwt + 쿠키를 이용한 로그인/로그아웃                                                    | 윤우형                 | 7/1 ~ 7/5   |
+| 나의 차량, 회의실 예약 현황 조회, 수정, 삭제                                           | 정재빈                 | 7/1 ~ 7/12  |
+| 회의실, 차량 예약 등록                                                                 | 우형                   | 7/5 ~ 7/12  |
+| 관리자모드 예약, 사원 확인                                                             | 오윤성                 | 7/5 ~ 7/12  |
+| 프로필 조회, 프로필 수정                                                               | 오윤성                 | 7/8 ~ 7/10  |
+| 예약 타이머 알림                                                                       | 정재빈                 | 7/12 ~ 7/14 |
+| 에러검출, 블랙박스테스트, 단위테스트                                                   | 정재빈, 윤우형, 오윤성 | ~ 7/14      |
 
-## License
+---
 
--   Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+## 구현 기능
 
-## Berry - Nodejs version by Appseed
+### **Create(저장)**
 
--   [Free Nodejs](https://appseed.us/product/react-node-js-berry-dashboard)
--   [Premium Berry Nodejs](https://appseed.us/full-stack/react-berry-dashboard)
+-   회의실 예약 등록 - yoonseong
+-   회의실 예약 임시등록
+-   회의실 즐겨찾기 등록 /삭제
+-   회의실 이용 후 별점 저장
+-   회의실 등록 - jaebin , 관리자
 
-## More Free React Material Admin Templates
+### **Read(조회)**
 
--   [Free Materially](https://codedthemes.com/item/materially-free-reactjs-admin-template/)
--   [Free Mantis](https://mantisdashboard.io/free/)
+-   회의실 전체 예약/미예약 현황 조회
+-   회의실 호수에 따른 예약 현황 조회 → 동적쿼리
+-   특정회의실의 특정날짜,시간별 예약현황조회 → 동적쿼리
+-   인원수에 따른 회의실 목록 조회 → 동적쿼리
+-   현재 시간에 따른 회의실 조회 -
+    -   현재 예약/미예약 조회, 예약이면 - 다음 예약 시간 조회
+-   특정 날짜 + 특정 시간별 회의실 예약 현황 조회
+-   즐겨찾기가 많은 회의실 TOP3 조회
+-   내가 즐겨찾기한 회의실 조회
+-   내예약 현황 페이징
+-   전체예약 현황 페이징
+-   최근에 예약된 회의실 TOP limit 조회 - TOP limit 사용자에게 받고, 최근에 예약된 회의실,사원,예약현황 조회
+-   내가 예약한 회의실 남은 시간 조회 (회의전 - 곧 시작할,회의중 -회의가 끝나는)
+    -   동적 타이머
+-   내 예약 현황 조회
+    -   과거 예약 조회 - 예약 내역
+    -   현재 예약 조회 - 예약 현황
+-   특정 유저 예약 현황 조회
+    -   과거 예약 조회 - 예약 내역
+    -   현재 예약 조회 - 예약 현황
+-   7일/30일/90일 동안 많이 예약된 회의실별 개수, 회의실 목록 조회
+-   7일/30일/90일 동안 많이 예약된 시간별 개수 ,회의실 목록 조회
+-   7일/30일/90일 동안 회의 시작 시간별 회의실 목록 조회
+-   팀별/부서별/사원번호별/사원이름별 유저의 회의실 예약 조회 - 관리자
 
-[![IMG_8566.jpg](https://camo.githubusercontent.com/a2364ad8c498b2a7378dae5e1a5eb5d8e1fcb2d6ceeb8b54acdc2e8bc2508775/68747470733a2f2f6d616e74697364617368626f6172642e696f2f6164762d62616e6e65722d696d616765732f6f672d736f6369616c2e706e67)](https://mantisdashboard.io/free/)
+### **Update(수정)**
 
-## More Premium React Material Admin Templates
+-   회의 시작 종료 - QR -> 이유 : 더 정확함
+-   회의실 예약 현황 수정
+-   회의실 수정
+-   프로필 수정 - 관리자
+-   회의실 예약 강제 수정 - 관리자
 
--   [Mantis](https://mui.com/store/items/mantis-react-admin-dashboard-template/)
--   [Materially](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
+## **Delete(삭제)**
 
-## Follow us
+-   종료는 특정시간 지나면 회의가 종료가 됬다고 생각하고 자동종료, QR은 10분전에 열리고, 안 찍을시 회의실 방출
+-   회의실 예약 삭제 (취소)
+-   회의실 삭제 - 관리자
+-   내가 즐겨찾기한 회의실 삭제 (취소)
 
--   [Website](https://berrydashboard.io)
--   [Blog](https://blog.berrydashboard.io)
--   [CodedThemes](https://codedthemes.com)
--   [Dribbble](https://dribbble.com/codedthemes)
--   [Facebook](https://www.facebook.com/codedthemes)
--   [Twitter](https://twitter.com/codedthemes)
+## etc
+
+-   **웹소켓 인원수로 중복 예약 방지**
+-   회의실 public / private -> public은 websocket 전체 알림, private은 알림 x
+-   회의 조기 종료, 연장 -> 회원 종료 -> 종료시각 업데이트 -> 해당 회의실 예약 로우 재조회
+
+### 관리자
+
+이미 해놓은거(차량, 회의실 중복 있을 수 있음)
+
+-   사원등록
+-   사원수정
+-   사원 비밀번호 수정
+-   직급/팀/부서/사원번호/사원이름 유저의 회의실 예약 조회
+-   관리자인지 롤체크
+-   이미지 업로드
+-   차량정보등록
+-   차량정보 수정
+-   차량 정보 삭제
+-   회의실 등록
+-   회의실 삭제
+-   회의실 수정
+
+---
+
+## 차량
+
+### Create(저장)
+
+-   [x] 차량 예약 등록
+-   [x] 차량 예약 임시 등록
+-   [x] 차량 예약 강제 등록 - 관리자
+-   [x] 차량 즐겨찾기 등록
+-   [x] 새로운 차량 등록 - 관리자
+-   [x] 차량 이용 후 별점 저장
+
+### Read(조회)
+
+-   [x] 차량 전체 예약/미예약 현황 조회
+-   [x] 차량 종류에 따른 예약 현황 조회
+-   [x] 특정 날짜 + 특정 시간별 차량 예약 현황조회
+-   [x] 즐겨찾기가 많은 차량 TOP3 조회
+-   [x] 최근에 예약된 차량 조회
+-   [x] 내가 예약한 차량 시간 조회 (동적 타이머)
+-   [x] 지정된 차량 단일 조회
+-   [x] 7일 동안 가장 많이 예약된 차량 조회
+-   [x] 7일 동안 가장 많이 예약된 시간대 조회
+-   [x] 내 예약 조회
+    -   현재 예약 조회 - 예약 현황
+    -   과거 예약 조회 - 예약 내역
+-   [x] 내가 즐겨찾기한 차량 조회
+
+## Update(수정)
+
+-   [x] 내 차량 예약 현황 수정
+-   [x] 차량 정보 수정 -관리자
+-   [x] 차량 예약 강제 수정
+
+## Delete(조회)
+
+-   [x] 내 차량
+-   [x] 내가 즐겨찾기한 차량 삭제
+-   [x] 차량 정보 삭제 -관리자
+-   [x] 차량 예약 관리자 삭제
+
+## etc
+
+-   [ ] 차량 조기 반납
